@@ -30,7 +30,7 @@ body {
   background-color: #151515;
 }
 
-.home-container, .aboutme-container {
+.home-container, .aboutme-container, .school-container {
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -160,11 +160,11 @@ p {
 /* About Me */
 .aboutme-container {
   background-color: #151515;
-  -webkit-box-shadow: 1px -1px 15px 6px #151515; 
-  box-shadow: 1px -1px 15px 6px #151515;
+  -webkit-box-shadow: 0px -10px 40px 5px #151515; 
+  box-shadow: 0px -10px 40px 5px #151515;
 }
 
-.aboutme-centered {
+.aboutme-centered, .school-centered {
   width: 78.59%;
   height: 62.36%;
   position: absolute;
@@ -177,35 +177,163 @@ p {
   text-align: left;
   font-family: "Poppins", sans-serif;
   color: #2bc384a9;
+  font-size: 1.25vw;
 }
 
 .introduction h1 {
   font-family: "Morganite";
   color: var(--aqua-color);
   letter-spacing: 6px;
-}
-
-.aboutme-title {
-  margin-bottom: 19px;
-  color: var(--aqua-color);
-  font-weight: 500;
+  font-size: 5vw;
 }
 
 .aboutme-description {
-  width: 100%;
-  text-align: center;
+  width: 42.94%;
   color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 9.73%;
+  font-size: 1.25vw;
+}
+
+.aboutme-description .welcome {
+  color: var(--aqua-color);
+  font-weight: 600;
+  display: block;  
+}
+
+.aboutme-description span:not(.welcome) {
+  display: block;
+  height: 4vh;
+}
+
+.aboutme-image {
+  width: 39.76%;
+  border: 2px solid #fff;
+  border-radius: 27% 73% 62% 38% / 30% 30% 70% 70% ;
+  position: absolute;
+  background-image: url(./static/img/cat-coder.gif);
+  background-size: contain;
+  bottom: 0;
+  right: 0;
+}
+
+.aboutme-image::before {
+  content: "";
+  display: block;
+  padding-top: 70%;
+}
+
+
+/* School */
+.school-container {
+  background-color: #151515;
+}
+
+.subjects-container {
+  width: 100%;
+  height: 66.14%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6.23%;
+}
+
+.tpsi, .computing {
+  width: 23.359%;
+  height: 100%;
+  margin-left: 6.66%;
+}
+
+.tpsi h1, .computing h1 {
+  color: var(--aqua-color);
+  font-family: var(--morganite);
+  font-size: 5vw;
+}
+
+.exercise-box {
+  width: 100%;
+  height: 62.96%;
+  background-color: #2BC383;
+  border-radius: 9px;
+  box-shadow: -3px 4px 11px #2BC383;
+  position: relative;  
+  transform: rotate(5deg);
+  margin-top: 7%;
+}
+
+.link-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 74.86631016%;
+  background-color: #fff;
+  border-radius: 9px 9px 0px 0px;
+}
+
+.name {
   position: absolute;
   bottom: 0;
-}
-
-.aboutme-description div {
-  width: 42.94%;
-}
-
-.aboutme-description div p {
+  left: 0;
+  width: 100%;
+  height: 25.13368984%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
+  color: #fff;
+}
+
+.ex-2 {
+  position: absolute;
+  left: 10.5%;
+  top: 9%;
+  width: 83.82%;
+  height: 100%;
+  background-color: rgba(43, 195, 131, 0.7);
+  box-shadow: -4px 4px 8px rgba(43, 195, 131, 0.7);
+  border-radius: 9px;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2BC383 #151515;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 2px;
+  width: 2px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #151515;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #151515;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #151515;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #2BC383;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #2BC383;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #2BC383;
 }
 

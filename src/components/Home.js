@@ -1,5 +1,5 @@
 import {loadFull} from "tsparticles"
-import { useCallback, useEffect, useState } from "react"
+import { useCallback } from "react"
 import Particles from "react-tsparticles"
 
 
@@ -147,7 +147,7 @@ async function writeMySpec(dev) {
         work.textContent = phrase        
     }
     
-    if (dev == "Front-end") {
+    if (dev === "Front-end") {
         writeMySpec("Software")
     } else {
         writeMySpec("Front-end")
