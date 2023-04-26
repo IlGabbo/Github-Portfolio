@@ -30,10 +30,11 @@ body {
   background-color: #151515;
 }
 
-.home-container {
+.home-container, .aboutme-container {
   width: 100%;
   height: 100%;
   background-color: transparent;
+  position: relative;
 }
 
 .particles-js-canvas-el {
@@ -43,6 +44,8 @@ body {
   z-index: -1;
 }
 
+
+/* Home */
 .aqua-blur, .home-content {
   width: 29.68%;
   height: 31.8%;  
@@ -102,6 +105,11 @@ p {
   animation: border 1s infinite;
 }
 
+#particlescnt {
+  width: 100%;
+  height: 100%;
+}
+
 @keyframes border {
   from {
     border-right: 1px solid #fff;
@@ -113,8 +121,9 @@ p {
 
 .myname-char {
   padding-left: 3px;
-  text-align: center;
-  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .myname-char:hover {  
@@ -145,5 +154,58 @@ p {
     transform: translateY(0);
     font-size: var(--name-font-size);
   }
+}
+
+
+/* About Me */
+.aboutme-container {
+  background-color: #151515;
+  -webkit-box-shadow: 1px -1px 15px 6px #151515; 
+  box-shadow: 1px -1px 15px 6px #151515;
+}
+
+.aboutme-centered {
+  width: 78.59%;
+  height: 62.36%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.introduction p {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  color: #2bc384a9;
+}
+
+.introduction h1 {
+  font-family: "Morganite";
+  color: var(--aqua-color);
+  letter-spacing: 6px;
+}
+
+.aboutme-title {
+  margin-bottom: 19px;
+  color: var(--aqua-color);
+  font-weight: 500;
+}
+
+.aboutme-description {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.aboutme-description div {
+  width: 42.94%;
+}
+
+.aboutme-description div p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
