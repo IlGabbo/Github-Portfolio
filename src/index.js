@@ -4,6 +4,7 @@ import './index.css'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import School from './components/School'
+import Social from './components/Social'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,5 +12,6 @@ root.render(
     <Home my_name={"Gabbo"}/>
     <AboutMe/>
     <School/>
+    <Social/>
   </React.StrictMode>
 )
