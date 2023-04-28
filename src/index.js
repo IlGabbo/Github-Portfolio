@@ -12,6 +12,6 @@ root.render(
     <Home my_name={"Gabbo"}/>
     <AboutMe/>
     <School/>
-    <Social/>
+    <Social socials={["GitHub", "Discord", "Telegram"]}/>
   </React.StrictMode>
 )
