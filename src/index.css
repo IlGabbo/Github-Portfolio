@@ -240,8 +240,9 @@ p {
 
 .tpsi, .computing {
   width: 23.359%;
-  height: 100%;
+  height: 80%;
   margin-left: 6.66%;
+  position: relative;
 }
 
 .tpsi h1, .computing h1 {
@@ -253,13 +254,47 @@ p {
 
 .exercise-box {
   width: 100%;
-  height: 62.96%;
+  height: 70%;
   background-color: #2BC383;
   border-radius: 9px;
   box-shadow: -3px 4px 11px #2BC383;
   position: relative;  
   transform: rotate(5deg);
+  transform-origin: bottom right;
   margin-top: 7%;
+}
+
+.ex-2 {
+  position: absolute;
+  bottom: -5%;
+  right: 5%;
+  width: 83.82%;
+  height: 62.96%;
+  background-color: rgba(43, 195, 131, 0.7);
+  box-shadow: -4px 4px 8px rgba(43, 195, 131, 0.7);
+  border-radius: 9px;
+  transform: rotate(-7deg);
+  z-index: -1;
+}
+
+.ex-2 .link-preview {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.exercise-box_scrolling {
+  animation: box-scrolling linear .1s;
+}
+
+@keyframes box-scrolling {
+  0% {
+    transform: rotate(5deg);
+  } 
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
 
 .link-preview {
@@ -270,6 +305,9 @@ p {
   height: 74.86631016%;
   background-color: #fff;
   border-radius: 9px 9px 0px 0px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .name {
@@ -285,19 +323,6 @@ p {
   font-weight: 600;
   font-size: 1rem;
   color: #fff;
-}
-
-.ex-2 {
-  position: absolute;
-  left: 10.5%;
-  top: 9%;
-  width: 83.82%;
-  height: 100%;
-  background-color: rgba(43, 195, 131, 0.7);
-  box-shadow: -4px 4px 8px rgba(43, 195, 131, 0.7);
-  border-radius: 9px;
-  transform: rotate(-10deg);
-  z-index: -1;
 }
 
 
@@ -392,7 +417,6 @@ p {
 
 
 
-
 /* Scrollbar */
 /* Firefox */
 * {
@@ -431,3 +455,52 @@ p {
   background-color: #2BC383;
 }
 
+
+/* Sites preview */
+.chucknorris {
+  background-image: url(static/img/projectspreview/ChuckNorrisAPI.png);
+}
+
+.colorpicker {
+  background-image: url(static/img/projectspreview/Color\ Picker.png);
+}
+
+.compito17dic {
+  background-image: url(static/img/projectspreview/Compito17Dicembre.png);
+}
+
+.decimalebinario {
+  background-image: url(static/img/projectspreview/DecimaleBinario.png);
+}
+
+.beginneres {
+  background-image: url(static/img/projectspreview/Esercizi\ da\ Beginner.png);
+}
+
+.fioreanimato {
+  background-image: url(static/img/projectspreview/Fiorellino\ Animato.png);
+}
+
+.fiorefunctions {
+  background-image: url(static/img/projectspreview/Fiorellino\ Funzionato.png);
+}
+
+.json {
+  background-image: url(static/img/projectspreview/Json.png);
+}
+
+.motouniaccelerato {
+  background-image: url(static/img/projectspreview/Moto\ Uniformemente\ Accelerato.png);
+}
+
+.randomcircles {
+  background-image: url(static/img/projectspreview/RandomCircles.png);
+}
+
+.sinusoide {
+  background-image: url(static/img/projectspreview/Sinusoide.png);
+}
+
+.tris {
+  background-image: url(static/img/projectspreview/Tris.png);
+}
