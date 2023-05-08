@@ -1,5 +1,3 @@
-import Earth from "./Earth"
-
 function Social({socials}) {
     return (
         <div className="social-container">
@@ -24,8 +22,7 @@ function Social({socials}) {
                         <div className="social-name">{socials[2]}</div>
                     </div>
                 </div>
-                <div className="where-i-am-cnt">
-                    
+                <div className="where-i-am-cnt">                  
                 </div>
             </div>
         </div>

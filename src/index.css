@@ -30,7 +30,7 @@ body {
   background-color: #151515;
 }
 
-.home-container, .aboutme-container, .school-container, .social-container {
+.home-container, .aboutme-container, .school-container, .social-container, .skills-container {
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -164,7 +164,7 @@ p {
   box-shadow: 0px -10px 40px 5px #151515;
 }
 
-.aboutme-centered, .school-centered, .social-centered {
+.aboutme-centered, .school-centered, .social-centered, .skills-centered {
   width: 78.59%;
   height: 62.36%;
   position: absolute;
@@ -413,6 +413,117 @@ p {
   left: 0;
 }
 
+/* Skills */
+.skills-container {
+  background-color: #151515;
+}
+
+.carousel {
+  width: 100%;
+
+  margin-top: 56px;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.skill-box {
+  width: 21.09%;
+  background-color: #2CC383;
+  border: 4px solid #2D8764;
+  border-radius: 7px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.skill-box::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.skill-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 5% auto;
+  width: 90.56%;
+  height: 74.52%;
+  text-align: center;
+}
+
+.skill-logo {
+  width: 23.43%;
+  position: relative;
+  background-color: #2D8764;
+  border-radius: 100%;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+.skill-logo::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.skill-title {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  margin: 9px 0px 9px 0px;
+}
+
+.skill-description {
+  width: 100%;
+  height: 51.26%;
+  background-color: #2D8764;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.781vw;
+  text-align: center;
+  word-break: break-all;
+}
+
+.python {
+  background-image: url(static/img/languages/python.svg);
+}
+
+.java {
+  background-image: url(static/img/languages/java.svg);
+}
+
+.css {
+  background-image: url(static/img/languages/css-3.svg);
+}
+
+.js {
+  background-image: url(static/img/languages/js.svg);
+}
+
+.nodejs {
+  background-image: url(static/img/languages/nodejs.svg);
+}
+
+.electronjs {
+  background-image: url(static/img/languages/electronjs.svg);
+}
+
+.reactjs {
+  background-image: url(static/img/languages/reactjs.svg);
+}
+
+.mysql {
+  background-image: url(static/img/languages/mysql.svg);
+}
+
+.git {
+  background-image: url(static/img/languages/git.svg);
+}
 
 
 

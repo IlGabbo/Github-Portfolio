@@ -5,6 +5,7 @@ import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import School from './components/School'
 import Social from './components/Social'
+import Skills from './components/Skills'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Home my_name={"Gabbo"}/>
     <AboutMe/>
     <School/>
+    <Skills/>
     <Social socials={["GitHub", "Discord", "Telegram"]}/>
   </React.StrictMode>
 )
