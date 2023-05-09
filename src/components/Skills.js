@@ -11,7 +11,7 @@ const languages = [
 ]
 
 function PrintBoxes() {
-    const sas = languages.map((el, key) => 
+    const boxes = languages.map((el, key) =>        
         <div key={key} className="skill-box">
             <div className="skill-content">
                 <div className={"skill-logo " + el.logo}></div>
@@ -20,8 +20,9 @@ function PrintBoxes() {
             </div>
         </div>
         )
+
     return (
-       <div className="carousel">{sas}</div>
+        <div className="row">{boxes}</div>
     )
 }
 

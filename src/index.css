@@ -175,7 +175,7 @@ p {
 
 .introduction p {
   text-align: left;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #2bc384a9;
   font-size: 1.25vw;
 }
@@ -190,7 +190,7 @@ p {
 .aboutme-description {
   width: 42.94%;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   margin-top: 9.73%;
   font-size: 1.25vw;
@@ -319,7 +319,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: #fff;
@@ -357,7 +357,7 @@ p {
 }
 
 .social-name {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: bold;
   color: #fff;
   font-size: 1.25vw;
@@ -418,16 +418,6 @@ p {
   background-color: #151515;
 }
 
-.carousel {
-  width: 100%;
-
-  margin-top: 56px;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
-}
-
 .skill-box {
   width: 21.09%;
   background-color: #2CC383;
@@ -473,21 +463,37 @@ p {
 
 .skill-title {
   font-weight: bold;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 9px 0px 9px 0px;
 }
 
-.skill-description {
+div.skill-description {
   width: 100%;
   height: 51.26%;
   background-color: #2D8764;
   border-radius: 10px;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;  
   font-size: 0.781vw;
   text-align: center;
-  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal;
 }
+
+.row {
+  width: 100%;
+  margin-top: 56px;
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.row::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 .python {
   background-image: url(static/img/languages/python.svg);
