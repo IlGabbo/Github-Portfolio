@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
 const titles = {
@@ -94,7 +94,7 @@ function School() {
                         </div>
                         <div className="ex-2">
                             <div>
-                                <div className="link-preview"></div>
+                                <div className={"link-preview" + " " + titles.tpsi.preview[tpsiIndex]}></div>
                                 <div className="name">{titles.tpsi.titles[tpsiIndex+1]}</div>
                             </div>
                         </div>
