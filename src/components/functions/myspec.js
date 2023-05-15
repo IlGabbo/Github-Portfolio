@@ -28,9 +28,9 @@ export const writeMySpec = async (dev) => {
         work.textContent = phrase        
     }
     
-    if (dev === "Front-end") {
+    if (dev === "Bruh-Front-end") {
         writeMySpec("Software")
     } else {
-        writeMySpec("Front-end")
+        writeMySpec("Bruh-Front-end")
     }
 }

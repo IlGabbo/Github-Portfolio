@@ -1,0 +1,99 @@
+/* Home */
+.aqua-blur,
+.home-content {
+  width: 29.68%;
+  height: 31.8%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.aqua-blur {
+  background: rgba(43, 195, 131, 0.5);
+  filter: blur(50px);
+  border-radius: 100%;
+}
+
+.home-content {
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-family: var(--vermin-font);
+  font-size: var(--name-font-size);
+  color: #fff;
+}
+
+.my-name {
+  color: var(--aqua-color);
+  display: flex;
+}
+
+.my-work {
+  font-family: "Morganite", sans-serif;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.speciality {
+  color: var(--aqua-color);
+  position: relative;
+}
+
+.speciality::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 100%;
+  animation: border 1s infinite;
+}
+
+#particlescnt {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes border {
+  from {
+    border-right: 1px solid #fff;
+  }
+
+  to {
+    border: none;
+  }
+}
+
+.myname-char {
+  padding-left: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myname-char:hover {
+  color: #94F5CD;
+  text-shadow: 2px 0 var(--aqua-color), -2px 0 var(--aqua-color), 0 2px var(--aqua-color), 0 -2px var(--aqua-color), 1px 1px var(--aqua-color), -1px -1px var(--aqua-color), 1px -1px var(--aqua-color), -1px 1px var(--aqua-color);  
+}
+
+.hi:hover, .myname-char:hover {
+  animation: gelatine 0.5s linear;
+  cursor: pointer;
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
+}

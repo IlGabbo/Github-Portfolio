@@ -1,0 +1,21 @@
+@media screen and (max-width: 822px) {
+    .social {
+        width: 100%;
+    }
+
+    .social-box {
+        width: 17%;
+    }
+
+    .social::after {
+        padding-bottom: 20%;
+    }
+
+    .social-name {
+        font-size: 2.5vw;
+    }
+
+    .social-icon {
+        width: 50%;
+    }
+}
