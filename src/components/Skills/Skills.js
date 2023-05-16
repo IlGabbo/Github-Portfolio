@@ -20,7 +20,7 @@ function PrintBoxes() {
             <div className="skill-content">
                 <div className={"skill-logo " + el.logo}></div>
                 <div className="skill-title">{el.name}</div>
-                <div className="skill-description">{el.description}</div>
+                <div className="skill-description"><p>{el.description}</p></div>
             </div>
         </div>
         )

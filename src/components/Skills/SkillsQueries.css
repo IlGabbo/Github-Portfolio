@@ -3,11 +3,27 @@
         overflow-y: auto;
     }
 
-    .skill-box {
-        width: 40%;
+    .skills-centered {
+        height: 90%;
     }
 
-    div.skill-description {
-        font-size: 1.5vw;
+    .skill-box {
+        width: 30%;
+        position: relative;
+    }
+
+    .skill-description {        
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .skill-description p {
+        font-size: 2vw;
+    }
+
+    .skill-description::after {
+        content: "";
+        display: block;
+        padding-top: 37%;
     }
 }

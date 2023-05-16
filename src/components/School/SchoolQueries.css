@@ -1,14 +1,24 @@
 @media screen and (max-width: 822px) {
     .subjects-container {
-        display: block;    
+        display: block; 
+    }
+
+    .school-centered {
+        height: 90%;
     }
 
     .tpsi, .computing {
         margin-top: 10%;
         margin-left: auto;
         margin-right: auto;
-        width: 250px;
-        height: 250px;
+        width: 60%;
+        height: 40%;
+        position: relative;
+    }
+
+    .name {
+        font-size: 3vw;
+        text-align: center;
     }
 
     .tpsi h1, .computing h1 {

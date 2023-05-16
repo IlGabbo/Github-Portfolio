@@ -102,7 +102,7 @@ function School() {
                         </div>
                         <div className="ex-2">
                             <div>
-                                <div className={"link-preview" + " " + titles.tpsi.preview[tpsiIndex]}></div>
+                                <div className={"link-preview" + " " + titles.tpsi.preview[tpsiIndex+1]}></div>
                                 <div className="name">{titles.tpsi.titles[tpsiIndex+1]}</div>
                             </div>
                         </div>

@@ -14,6 +14,6 @@ root.render(
     <AboutMe/>
     <School/>
     <Skills/>
-    <Social socials={["GitHub", "Discord", "Telegram"]} urls={["https://github.com/IlGabbo", "https://discordapp.com/users/424934230351544330", "t.me/@GabDevlp"] }/>
+    <Social socials={["GitHub", "Discord", "Telegram"]} urls={["https://github.com/IlGabbo", "https://discordapp.com/users/424934230351544330", "https://t.me/@GabDevlp"] }/>
   </React.StrictMode>
 )
