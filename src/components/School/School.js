@@ -1,68 +1,11 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useInView } from "react-intersection-observer"
+import { motion, useAnimation } from "framer-motion"
 import "./School.css"
 import "./SchoolQueries.css"
 
 
-const titles = {
-    tpsi: {
-        titles: 
-        [ 
-            "ChuckNorrisAPI",
-            "Color Picker",
-            "Compito 17 Dicembre",
-            "DecimaleBinario",
-            "Es da beginners",
-            "Fiorellino animato",
-            "Fiorellino funzionato",
-            "Json",
-            "Moto uniformemente accelerato",
-            "RandomCircles",
-            "Sinusoide",
-            "Tris" 
-        ],
-        link: 
-        [
-            "https://ilgabbo.github.io/redirect/Scuola/TPSI/",
-        ],
-        preview: [
-            "chucknorris",
-            "colorpicker",
-            "compito17dic",
-            "decimalebinario",
-            "beginneres",
-            "fioreanimato",
-            "fiorefunctions",
-            "json",
-            "motouniaccelerato",
-            "randomcircles",
-            "sinusoide",
-            "tris"
-        ]
-    },
-    computing:{
-    titles: [
-        "AreaRettangolo",
-        "Bank",
-        "Calculator",
-        "ContoCorrente",
-        "Esercitazione-2",
-        "Garage",
-        "McDonald",
-        "NumeriAlternati",
-        "Officina",
-        "Overloading",
-        "Overriding",
-        "Persone",
-        "StudioDentistico",
-        "Vehicles"
-    ],
-    link: [
-        "https://github.com/IlGabbo/ilgabbo.github.io/tree/main/redirect/Scuola/Informatica/"
-    ]
-    }
-}
-
-function School() {
+function School({titles}) {
     const scroll = (e) => {
         let element = e.currentTarget
         element.classList.add("exercise-box_scrolling")
@@ -71,69 +14,113 @@ function School() {
     const [tpsiIndex, setTpsiIndex] = useState(0)
     const [computingIndex, setComputingIndex] = useState(0)
 
+    const [leftRef, leftInView] = useInView()
+    const [rightRef, rightInView] = useInView()
+    const [titleRef, titleInView] = useInView()
+    const leftControl = useAnimation()
+    const rightControl = useAnimation()
+    const titleControl = useAnimation()
+    const leftVars = {
+        visible: {x: 0, opacity: 1, transition: {duration: .6}},
+        hidden: {x: -60, opacity: 0}
+    }
+    const rightVars = {
+        visible: {x: 0, opacity: 1, transition: {duration: .6}},
+        hidden: {x: 60, opacity: 0}
+    }
+    const titleVars = {
+        visible: {x: 0, opacity: 1, transition: {duration: .4}},
+        hidden: {x: -60, opacity: 0}
+    }
+
+    useEffect(() => {
+        if (titleInView) {
+            titleControl.start("visible")
+        } else {
+            titleControl.start("hidden")
+        }        
+    }, [titleControl, titleInView])
+
+    useEffect(() => {
+        if (rightInView) {
+            rightControl.start("visible")
+        } else {
+            rightControl.start("hidden")
+        }        
+    }, [rightControl, rightInView])
+
+    useEffect(() => {
+        if (leftInView) {
+            leftControl.start("visible")
+        } else {
+            leftControl.start("hidden")
+        }        
+    }, [leftControl, leftInView])
+
+
     return (
         <div className="school-container">
             <div className="school-centered">
-                <div className="introduction">
+                <motion.div ref={titleRef} animate={titleControl} initial="hidden" variants={titleVars} className="introduction">
                     <p>ABOUT</p>
                     <h1>SCHOOL</h1>
-                </div>
+                </motion.div>
                 <div className="subjects-container">
-                    <div className="tpsi">
+                    <motion.div className="tpsi" ref={leftRef} animate={leftControl} initial="hidden" variants={leftVars}>
                         <h1>TPSI</h1>
                         <div className="exercise-box" draggable="true" onDragStart={(e) => {
                                 scroll(e)
                                 setTpsiIndex(tpsiIndex+1)
-                                if (tpsiIndex > titles.tpsi.titles.length-2) {                                    
+                                if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
                                     setTpsiIndex(0)
                                 }                       
-                                document.querySelector(".tpsi .exercise-box .link-preview").classList.add(titles.tpsi.preview)
+                                document.querySelector(".tpsi .exercise-box .link-preview").classList.add(titles[0].tpsi.preview)
                             }} onTouchStart={(e) => {
                                 scroll(e)
                                 setTpsiIndex(tpsiIndex+1)
-                                if (tpsiIndex > titles.tpsi.titles.length-2) {                                    
+                                if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
                                     setTpsiIndex(0)
                                 }  
-                            }} onClick={() => {window.open(titles.tpsi.link+titles.tpsi.titles[tpsiIndex])}}>
+                            }} onClick={() => {window.open(titles[0].tpsi.link+titles[0].tpsi.titles[tpsiIndex])}}>
                             <div>
-                                <div className={"link-preview" + " " + titles.tpsi.preview[tpsiIndex]}></div>
-                                <div className="name">{titles.tpsi.titles[tpsiIndex]}</div>
+                                <div className={"link-preview" + " " + titles[0].tpsi.preview[tpsiIndex]}></div>
+                                <div className="name">{titles[0].tpsi.titles[tpsiIndex]}</div>
                             </div>
                         </div>
                         <div className="ex-2">
                             <div>
-                                <div className={"link-preview" + " " + titles.tpsi.preview[tpsiIndex+1]}></div>
-                                <div className="name">{titles.tpsi.titles[tpsiIndex+1]}</div>
+                                <div className={"link-preview" + " " + titles[0].tpsi.preview[tpsiIndex+1]}></div>
+                                <div className="name">{titles[0].tpsi.titles[tpsiIndex+1]}</div>
                             </div>
                         </div>
-                    </div>
-                    <div className="computing">
+                    </motion.div>
+                    <motion.div className="computing" ref={rightRef} animate={rightControl} initial="hidden" variants={rightVars}>
                         <h1>COMPUTING</h1>
                         <div className="exercise-box" draggable="true" onDragStart={(e) => {
                             scroll(e)
                             setComputingIndex(computingIndex+1)
-                            if (computingIndex > titles.computing.titles.length-2) {                                    
+                            if (computingIndex > titles[1].computing.titles.length-2) {                                    
                                 setComputingIndex(0)
                             }   
                         }} onTouchStart={(e) => {
                             scroll(e)
                             setComputingIndex(computingIndex+1)
-                            if (computingIndex > titles.tpsi.titles.length-2) {                                    
+                            if (computingIndex > titles[1].computing.titles.length-2) {                                    
                                 setComputingIndex(0)
                             }  
-                        }} onClick={() => {window.open(titles.computing.link+titles.computing.titles[computingIndex])}}>
+                        }} onClick={() => {window.open(titles[1].computing.link+titles[1].computing.titles[computingIndex])}}>
                             <div>
                                 <div className="link-preview"></div>
-                                <div className="name">{titles.computing.titles[computingIndex]}</div>
+                                <div className="name">{titles[1].computing.titles[computingIndex]}</div>
                             </div>
                         </div>
                         <div className="ex-2">
                             <div>
                                 <div className="link-preview"></div>
-                                <div className="name">{titles.computing.titles[computingIndex+1]}</div>
+                                <div className="name">{titles[1].computing.titles[computingIndex+1]}</div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

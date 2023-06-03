@@ -102,53 +102,51 @@
   color: #fff;
 }
 
-
-
 /* Sites preview */
 .chucknorris {
-  background-image: url(img/projectspreview/ChuckNorrisAPI.png);
+  background-image: url(/public/static/img/projectspreview/ChuckNorrisAPI.png);
 }
 
 .colorpicker {
-  background-image: url(img/projectspreview/Color\ Picker.png);
+  background-image: url(/public/static/img/projectspreview/Color\ Picker.png);
 }
 
 .compito17dic {
-  background-image: url(img/projectspreview/Compito17Dicembre.png);
+  background-image: url(/public/static/img/projectspreview/Compito17Dicembre.png);
 }
 
 .decimalebinario {
-  background-image: url(img/projectspreview/DecimaleBinario.png);
+  background-image: url(/public/static/img/projectspreview/DecimaleBinario.png);
 }
 
 .beginneres {
-  background-image: url(img/projectspreview/Esercizi\ da\ Beginner.png);
+  background-image: url(/public/static/img/projectspreview/Esercizi\ da\ Beginner.png);
 }
 
 .fioreanimato {
-  background-image: url(img/projectspreview/Fiorellino\ Animato.png);
+  background-image: url(/public/static/img/projectspreview/Fiorellino\ Animato.png);
 }
 
 .fiorefunctions {
-  background-image: url(img/projectspreview/Fiorellino\ Funzionato.png);
+  background-image: url(/public/static/img/projectspreview/Fiorellino\ Funzionato.png);
 }
 
 .json {
-  background-image: url(img/projectspreview/Json.png);
+  background-image: url(/public/static/img/projectspreview/Json.png);
 }
 
 .motouniaccelerato {
-  background-image: url(img/projectspreview/Moto\ Uniformemente\ Accelerato.png);
+  background-image: url(/public/static/img/projectspreview/Moto\ Uniformemente\ Accelerato.png);
 }
 
 .randomcircles {
-  background-image: url(img/projectspreview/RandomCircles.png);
+  background-image: url(/public/static/img/projectspreview/RandomCircles.png);
 }
 
 .sinusoide {
-  background-image: url(img/projectspreview/Sinusoide.png);
+  background-image: url(/public/static/img/projectspreview/Sinusoide.png);
 }
 
 .tris {
-  background-image: url(img/projectspreview/Tris.png);
+  background-image: url(/public/static/img/projectspreview/Tris.png);
 }

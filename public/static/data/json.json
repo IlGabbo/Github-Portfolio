@@ -1,0 +1,77 @@
+{
+    "school": [
+        {
+            "tpsi": {
+                "titles": 
+                [ 
+                    "ChuckNorrisAPI",
+                    "Color Picker",
+                    "Compito 17 Dicembre",
+                    "DecimaleBinario",
+                    "Es da beginners",
+                    "Fiorellino animato",
+                    "Fiorellino funzionato",
+                    "Json",
+                    "Moto uniformemente accelerato",
+                    "RandomCircles",
+                    "Sinusoide",
+                    "Tris" 
+                ],
+                "link": 
+                [
+                    "https://ilgabbo.github.io/redirect/Scuola/TPSI/"
+                ],
+                "preview": [
+                    "chucknorris",
+                    "colorpicker",
+                    "compito17dic",
+                    "decimalebinario",
+                    "beginneres",
+                    "fioreanimato",
+                    "fiorefunctions",
+                    "json",
+                    "motouniaccelerato",
+                    "randomcircles",
+                    "sinusoide",
+                    "tris"
+                ]
+            }
+        },
+        {
+            "computing":{
+                "titles": [
+                    "AreaRettangolo",
+                    "Bank",
+                    "Calculator",
+                    "ContoCorrente",
+                    "Esercitazione-2",
+                    "Garage",
+                    "McDonald",
+                    "NumeriAlternati",
+                    "Officina",
+                    "Overloading",
+                    "Overriding",
+                    "Persone",
+                    "StudioDentistico",
+                    "Vehicles"
+                ],
+                "link": [
+                    "https://github.com/IlGabbo/ilgabbo.github.io/tree/main/redirect/Scuola/Informatica/"
+                ]
+            }
+        }
+    ],
+    "skills": {
+        "languages": [
+            {"name": "Python", "description": "RATS or keyloggers", "logo": "python"},
+            {"name": "Java", "description": "...", "logo": "java"},
+            {"name": "CSS", "description": "Stylizing webpages", "logo": "css"},
+            {"name": "JS", "description": "null >= 0 -> true", "logo": "js"},
+            {"name": "NodeJS", "description": "JavaScript without browser", "logo": "nodejs"},
+            {"name": "ElectronJS", "description": "Desktop apps without C++ or Java", "logo": "electronjs"},
+            {"name": "ReactJS", "description": "Dynamic webpages", "logo": "reactjs"},
+            {"name": "MySQL", "description": "Storing data without protect the db from sql injections", "logo": "mysql"},
+            {"name": "Git", "description": "git push -> failed", "logo": "git"}
+        ]
+    }
+}

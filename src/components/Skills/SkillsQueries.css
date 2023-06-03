@@ -1,6 +1,8 @@
 @media screen and (max-width: 822px) {
     .row {
-        overflow-y: auto;
+        overflow: hidden;
+        height: 100%;
+        display: block;
     }
 
     .skills-centered {
@@ -25,5 +27,19 @@
         content: "";
         display: block;
         padding-top: 37%;
+    }    
+
+    .skill-content {
+        width: 11%;
+        flex-shrink: 0;
+    }
+
+    .first, .second {
+        width: 100%;        
+    }
+
+    .skill-title {        
+        font-size: 10px;
+        word-wrap: break-word;
     }
 }

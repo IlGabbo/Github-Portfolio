@@ -1,51 +1,71 @@
+import { useEffect } from "react"
+import { useInView } from "react-intersection-observer"
+import {motion, useAnimation} from "framer-motion"
 import "./Skills.css"
 import "./SkillsQueries.css"
 
 
-const languages = [
-    {name: "Python", description: "RATS or keyloggers", logo: "python"},
-    {name: "Java", description: "...", logo: "java"},
-    {name: "CSS", description: "Stylizing webpages", logo: "css"},
-    {name: "JS", description: "null >= 0 -> true", logo: "js"},
-    {name: "NodeJS", description: "JavaScript without browser", logo: "nodejs"},
-    {name: "ElectronJS", description: "Desktop apps without C++ or Java", logo: "electronjs"},
-    {name: "ReactJS", description: "Dynamic webpages", logo: "reactjs"},
-    {name: "MySQL", description: "Storing data without protect the db from sql injections", logo: "mysql"},
-    {name: "Git", description: "git push -> failed", logo: "git"}
-]
+export default function Skills({skills}) {    
+    const middle = parseInt(skills.length / 2)
+    const firstBoxes = skills.slice(0, middle)
+    const finalBoxes = skills.slice(middle, skills.length)
+    const {ref, inView, entry} = useInView()
+    const control = useAnimation()
+    const variants = {
+        visible: {x: 0, opacity: 1, transition: {duration: .5}},
+        hidden: {x: -60, opacity: 0}
+    }
 
-function PrintBoxes() {
-    const boxes = languages.map((el, key) =>        
-        <div key={key} className="skill-box">
-            <div className="skill-content">
-                <div className={"skill-logo " + el.logo}></div>
-                <div className="skill-title">{el.name}</div>
-                <div className="skill-description"><p>{el.description}</p></div>
-            </div>
-        </div>
-        )
+    useEffect(() => {
+        if (inView) {
+            control.start("visible")
+        } else {
+            control.start("hidden")
+        }
+    }, [control, inView])
 
     return (
-        <div className="skills-centered">
+        <div className="skills-container">           
+            <div className="skills-centered">
             <div className="introduction">
                 <div>
-                    <p>WHAT I DO</p>
-                    <h1>SKILLS</h1>
+                    <motion.p
+                        ref={ref}
+                        variants={variants}
+                        initial="hidden"
+                        animate={control}
+                    >
+                    WHAT I DO</motion.p>
+                    <motion.h1 ref={ref} variants={variants} initial="hidden" animate={control}>SKILLS</motion.h1>
                 </div>                    
             </div>  
             <div className="row">
-                {boxes}
+                <div className="first">
+                    {                    
+                        skills.map((el, key) => (
+                                <div key={key} className="skill-content">
+                                    <div className={"skill-logo " + el.logo}></div>
+                                    <div className="skill-title">{el.name}</div>
+                                    {/*<div className="skill-description"><p>{el.description}</p></div>*/}
+                                </div>
+                            )
+                        )   
+                    }
+                </div>
+                <div className="second">
+                    {
+                        skills.map((el, key) => (
+                                <div key={key} className="skill-content">
+                                    <div className={"skill-logo " + el.logo}></div>
+                                    <div className="skill-title">{el.name}</div>
+                                    {/*<div className="skill-description"><p>{el.description}</p></div>*/}
+                                </div>
+                            )
+                        )   
+                    }
+                </div>
             </div>
         </div>
-    )
-}
-
-
-
-export default function Skills() {
-    return (
-        <div className="skills-container">
-            <PrintBoxes></PrintBoxes>
         </div>
     )
 }

@@ -77,13 +77,13 @@ export default function BackroundParticles() {
                     shape: {
                         type: "image",
                         images: [
-                            {src: require("../../static/img/python.png")},
-                            {src: require("../../static/img/html-5.png")},
-                            {src: require("../../static/img/css-3.png")},
-                            {src: require("../../static/img/js.png")},
-                            {src: require("../../static/img/nodejs.png")},
-                            {src: require("../../static/img/reactjs.png")},
-                            {src: require("../../static/img/electron.png")}
+                            {src: require("../../static/img/particles/python.png")},
+                            {src: require("../../static/img/particles/html-5.png")},
+                            {src: require("../../static/img/particles/css-3.png")},
+                            {src: require("../../static/img/particles/js.png")},
+                            {src: require("../../static/img/particles/nodejs.png")},
+                            {src: require("../../static/img/particles/reactjs.png")},
+                            {src: require("../../static/img/particles/electron.png")}
                         ]                        
                     },
                     size: {
