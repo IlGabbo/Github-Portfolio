@@ -19,9 +19,10 @@
     }
 
     .aboutme-image {
-        left: 50%;
-        right: 50%;
-        transform: translateX(-50%);
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
         bottom: 0%;
     }
 }

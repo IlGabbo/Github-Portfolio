@@ -15,9 +15,6 @@
   height: 50%;
   display: flex;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
 }
 
 /*
@@ -121,6 +118,40 @@ div.skill-description {
   width: 100%;
   text-align: center;
 }
+
+.cubebox {
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvascontainer {
+  width: 15%;
+  height: 10vw;
+  flex-shrink: 0;  
+  position: relative;
+}
+
+.comment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6b9b41;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/*
+.canvascontainer::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+} */
 
 .python {
   background-image: url(/public/static/img/languages/python.svg);

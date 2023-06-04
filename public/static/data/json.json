@@ -15,11 +15,12 @@
                     "Moto uniformemente accelerato",
                     "RandomCircles",
                     "Sinusoide",
-                    "Tris" 
+                    "Tris",
+                    "WhichFoodAreYou"
                 ],
                 "link": 
                 [
-                    "https://ilgabbo.github.io/redirect/Scuola/TPSI/"
+                    "https://github.com/IlGabbo/ilgabbo.github.io/tree/main/redirect/Scuola/TPSI/"
                 ],
                 "preview": [
                     "chucknorris",
@@ -33,12 +34,13 @@
                     "motouniaccelerato",
                     "randomcircles",
                     "sinusoide",
-                    "tris"
+                    "tris",
+                    "wfay"
                 ]
             }
         },
         {
-            "computing":{
+            "cpscience":{
                 "titles": [
                     "AreaRettangolo",
                     "Bank",
@@ -63,15 +65,15 @@
     ],
     "skills": {
         "languages": [
-            {"name": "Python", "description": "RATS or keyloggers", "logo": "python"},
-            {"name": "Java", "description": "...", "logo": "java"},
-            {"name": "CSS", "description": "Stylizing webpages", "logo": "css"},
-            {"name": "JS", "description": "null >= 0 -> true", "logo": "js"},
-            {"name": "NodeJS", "description": "JavaScript without browser", "logo": "nodejs"},
-            {"name": "ElectronJS", "description": "Desktop apps without C++ or Java", "logo": "electronjs"},
-            {"name": "ReactJS", "description": "Dynamic webpages", "logo": "reactjs"},
-            {"name": "MySQL", "description": "Storing data without protect the db from sql injections", "logo": "mysql"},
-            {"name": "Git", "description": "git push -> failed", "logo": "git"}
+            {"name": "Python", "logo": "python"},
+            {"name": "Java", "logo": "java"},
+            {"name": "CSS", "logo": "css"},
+            {"name": "JS", "logo": "js"},
+            {"name": "NodeJS", "logo": "nodejs"},
+            {"name": "ElectronJS", "logo": "electronjs"},
+            {"name": "ReactJS", "logo": "reactjs"},
+            {"name": "MySQL", "logo": "mysql"},
+            {"name": "Git", "logo": "git"}
         ]
     }
 }

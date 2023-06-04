@@ -56,7 +56,7 @@ function Social({socials, urls}) {
                 </motion.div>
                 <div className="globo">
                     <Canvas>
-                        <OrbitControls />
+                        <OrbitControls enableZoom={false} rotateSpeed={.3}/>
                         <ambientLight intensity={0.5}></ambientLight>
                         <spotLight position={[10, 15, 10]} angle={0.3} />
                         <Globo />
@@ -70,7 +70,7 @@ function Social({socials, urls}) {
 function Globo() {
     const texture = useLoader(TextureLoader, "/static/img/texture/pxfuel.jpg")
     return (        
-        <Sphere scale={3}>
+        <Sphere scale={3}>            
             <meshStandardMaterial map={texture} />
         </Sphere>
     )

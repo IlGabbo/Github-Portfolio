@@ -7,7 +7,7 @@
         height: 90%;
     }
 
-    .tpsi, .computing {
+    .tpsi, .computing-science {
         margin-top: 10%;
         margin-left: auto;
         margin-right: auto;
@@ -21,7 +21,7 @@
         text-align: center;
     }
 
-    .tpsi h1, .computing h1 {
+    .tpsi h1, .computing-science h1 {
         font-size: 64px;
     }
 }

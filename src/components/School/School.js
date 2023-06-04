@@ -12,7 +12,7 @@ function School({titles}) {
         element.addEventListener("animationend", () => {element.classList.remove("exercise-box_scrolling")})
     }
     const [tpsiIndex, setTpsiIndex] = useState(0)
-    const [computingIndex, setComputingIndex] = useState(0)
+    const [cpScienceIndex, setCpScienceIndex] = useState(0)
 
     const [leftRef, leftInView] = useInView()
     const [rightRef, rightInView] = useInView()
@@ -83,41 +83,41 @@ function School({titles}) {
                                 }  
                             }} onClick={() => {window.open(titles[0].tpsi.link+titles[0].tpsi.titles[tpsiIndex])}}>
                             <div>
-                                <div className={"link-preview" + " " + titles[0].tpsi.preview[tpsiIndex]}></div>
+                                <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex]}></div>
                                 <div className="name">{titles[0].tpsi.titles[tpsiIndex]}</div>
                             </div>
                         </div>
                         <div className="ex-2">
                             <div>
-                                <div className={"link-preview" + " " + titles[0].tpsi.preview[tpsiIndex+1]}></div>
+                                <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex+1]}></div>
                                 <div className="name">{titles[0].tpsi.titles[tpsiIndex+1]}</div>
                             </div>
                         </div>
                     </motion.div>
-                    <motion.div className="computing" ref={rightRef} animate={rightControl} initial="hidden" variants={rightVars}>
-                        <h1>COMPUTING</h1>
+                    <motion.div className="computing-science" ref={rightRef} animate={rightControl} initial="hidden" variants={rightVars}>
+                        <h1>CP SCIENCE</h1>
                         <div className="exercise-box" draggable="true" onDragStart={(e) => {
                             scroll(e)
-                            setComputingIndex(computingIndex+1)
-                            if (computingIndex > titles[1].computing.titles.length-2) {                                    
-                                setComputingIndex(0)
+                            setCpScienceIndex(cpScienceIndex+1)
+                            if (cpScienceIndex > titles[1].cpscience.titles.length-2) {                                    
+                                setCpScienceIndex(0)
                             }   
                         }} onTouchStart={(e) => {
                             scroll(e)
-                            setComputingIndex(computingIndex+1)
-                            if (computingIndex > titles[1].computing.titles.length-2) {                                    
-                                setComputingIndex(0)
+                            setCpScienceIndex(cpScienceIndex+1)
+                            if (cpScienceIndex > titles[1].cpscience.titles.length-2) {                                    
+                                setCpScienceIndex(0)
                             }  
-                        }} onClick={() => {window.open(titles[1].computing.link+titles[1].computing.titles[computingIndex])}}>
+                        }} onClick={() => {window.open(titles[1].cpscience.link+titles[1].cpscience.titles[cpScienceIndex])}}>
                             <div>
                                 <div className="link-preview"></div>
-                                <div className="name">{titles[1].computing.titles[computingIndex]}</div>
+                                <div className="name">{titles[1].cpscience.titles[cpScienceIndex]}</div>
                             </div>
                         </div>
                         <div className="ex-2">
                             <div>
                                 <div className="link-preview"></div>
-                                <div className="name">{titles[1].computing.titles[computingIndex+1]}</div>
+                                <div className="name">{titles[1].cpscience.titles[cpScienceIndex+1]}</div>
                             </div>
                         </div>
                     </motion.div>

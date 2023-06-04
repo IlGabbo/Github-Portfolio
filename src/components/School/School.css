@@ -12,7 +12,7 @@
 }
 
 .tpsi,
-.computing {
+.computing-science {
   width: 23.359%;
   height: 80%;
   margin-left: 6.66%;
@@ -20,7 +20,7 @@
 }
 
 .tpsi h1,
-.computing h1 {
+.computing-science h1 {
   color: var(--aqua-color);
   font-family: var(--morganite);
   font-size: 5vw;
@@ -99,6 +99,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  word-wrap: break-word;
   color: #fff;
 }
 
@@ -149,4 +150,8 @@
 
 .tris {
   background-image: url(/public/static/img/projectspreview/Tris.png);
+}
+
+.wfay {
+  background-image: url(/public/static/img/projectspreview/wfay.png);
 }
