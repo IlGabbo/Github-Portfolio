@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
 import { Canvas, useFrame, useLoader } from "react-three-fiber"
 import { TextureLoader } from "three"
-import { PerspectiveCamera, View } from "@react-three/drei"
 import "./Skills.css"
 import "./SkillsQueries.css"
 
@@ -68,15 +67,11 @@ export default function Skills({skills}) {
             </div>
             <div className="cubebox" ref={track}>
                 <div className="comment">// a stupid idea</div>
-                <Display language={"python"}/>
-                <Display language={"java"}/>
-                <Display language={"css-3"}/>
-                <Display language={"js"}/>
-                <Display language={"nodejs"}/>
-                <Display language={"electronjs"}/>
-                <Display language={"reactjs"}/>
-                <Display language={"mysql"}/>
-                <Display language={"git"}/>
+                {
+                    skills.map((value, key) => (
+                        <Display key={key} language={value.logo}/>
+                    ))
+                }
             </div>
         </div>
         </div>
