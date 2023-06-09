@@ -1,1 +1,1 @@
-[Paga available here](http://ilgabbo.ddns.net)
+[Page available here](http://ilgabbo.ddns.net)
