@@ -1,4 +1,4 @@
-@media screen and (max-width: 822px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .row {
         overflow: hidden;
         margin-top: 10px;
@@ -11,7 +11,7 @@
     }
 
     .skill-content {
-        width: 30%;
+        width: 20%;
         flex-shrink: 0;
     }
 
@@ -22,7 +22,36 @@
     }
 
     .skill-title {        
-        font-size: 10px;
+        font-size: 2vw;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 480px) {    
+    .row {
+        overflow: hidden;
+        margin-top: 10px;
+        height: 90%;
+        display: block;
+    }
+
+    .skills-centered {
+        height: 90%;
+    }
+
+    .skill-content {
+        width: 20%;
+        flex-shrink: 0;
+    }
+
+    .first, .second {
+        width: 100%;
+        height: 10%;
+        flex-wrap: wrap;
+    }
+
+    .skill-title {        
+        font-size: 3vw;
         word-wrap: break-word;
     }
 }

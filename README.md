@@ -1,1 +1,1 @@
-[Paga available here](http://ilgabbo.ddns.net)
+Design inspired by [Valeriusec](https://github.com/valeriusec)

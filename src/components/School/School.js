@@ -67,34 +67,37 @@ function School({titles}) {
                 </motion.div>
                 <div className="subjects-container">
                     <motion.div className="tpsi" ref={leftRef} animate={leftControl} initial="hidden" variants={leftVars}>
-                        <h1>TPSI</h1>
-                        <div className="exercise-box" draggable="true" onDragStart={(e) => {
-                                scroll(e)
-                                setTpsiIndex(tpsiIndex+1)
-                                if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
-                                    setTpsiIndex(0)
-                                }                       
-                                document.querySelector(".tpsi .exercise-box .link-preview").classList.add(titles[0].tpsi.preview)
-                            }} onTouchStart={(e) => {
-                                scroll(e)
-                                setTpsiIndex(tpsiIndex+1)
-                                if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
-                                    setTpsiIndex(0)
-                                }  
-                            }} onClick={() => {window.open(titles[0].tpsi.link+titles[0].tpsi.titles[tpsiIndex])}}>
-                            <div>
-                                <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex]}></div>
-                                <div className="name">{titles[0].tpsi.titles[tpsiIndex]}</div>
+                        <div className="content">
+                            <h1>TPSI</h1>
+                            <div className="exercise-box" draggable="true" onDragStart={(e) => {
+                                    scroll(e)
+                                    setTpsiIndex(tpsiIndex+1)
+                                    if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
+                                        setTpsiIndex(0)
+                                    }                       
+                                    document.querySelector(".tpsi .exercise-box .link-preview").classList.add(titles[0].tpsi.preview)
+                                }} onTouchStart={(e) => {
+                                    scroll(e)
+                                    setTpsiIndex(tpsiIndex+1)
+                                    if (tpsiIndex > titles[0].tpsi.titles.length-2) {                                    
+                                        setTpsiIndex(0)
+                                    }  
+                                }} onClick={() => {window.open(titles[0].tpsi.link+titles[0].tpsi.titles[tpsiIndex])}}>
+                                <div>
+                                    <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex]}></div>
+                                    <div className="name">{titles[0].tpsi.titles[tpsiIndex]}</div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="ex-2">
-                            <div>
-                                <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex+1]}></div>
-                                <div className="name">{titles[0].tpsi.titles[tpsiIndex+1]}</div>
+                            <div className="ex-2">
+                                <div>
+                                    <div className={"link-preview " + titles[0].tpsi.preview[tpsiIndex+1]}></div>
+                                    <div className="name">{titles[0].tpsi.titles[tpsiIndex+1]}</div>
+                                </div>
                             </div>
-                        </div>
+                        </div>                        
                     </motion.div>
                     <motion.div className="computing-science" ref={rightRef} animate={rightControl} initial="hidden" variants={rightVars}>
+                        <div className="content">
                         <h1>CP SCIENCE</h1>
                         <div className="exercise-box" draggable="true" onDragStart={(e) => {
                             scroll(e)
@@ -119,6 +122,7 @@ function School({titles}) {
                                 <div className="link-preview"></div>
                                 <div className="name">{titles[1].cpscience.titles[cpScienceIndex+1]}</div>
                             </div>
+                        </div>
                         </div>
                     </motion.div>
                 </div>
