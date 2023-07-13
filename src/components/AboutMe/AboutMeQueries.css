@@ -17,6 +17,25 @@
     }
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+    .introduction p {
+        font-size: 3vw;
+    }
+    .introduction h1 {
+        font-size: 10vw;
+    }
+
+    .aboutme-description {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .aboutme-image {
+        top: 0;
+        bottom: unset;        
+    }
+}
+
 @media screen and (max-width: 480px) {
     .introduction p {
         font-size: 3vw;

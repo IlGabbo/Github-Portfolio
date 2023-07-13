@@ -17,24 +17,6 @@
   position: absolute;
 }
 
-/*
-.skill-box {
-  width: 22.18%;
-  margin: 2%;
-  background-color: #2CC383;
-  border: 4px solid #2D8764;
-  border-radius: 7px;  
-  z-index: 10;
-  transform: rotate(5deg);
-} 
-
-.skill-box::after {
-  content: "";
-  display: block;
-  padding-bottom: 10%;
-} 
-*/
-
 .first {
   animation: scroll 10s linear infinite;
 }
@@ -121,7 +103,7 @@ div.skill-description {
 
 .cubebox {
   width: 100%;
-  height: 30%;
+  min-height: 30%;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -131,14 +113,16 @@ div.skill-description {
 }
 
 .canvascontainer {
-  width: 15%;
-  height: 10vw;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
   flex-shrink: 0;  
   position: relative;
 }
 
 .comment {
   position: absolute;
+  height: 40px;
   top: 0;
   left: 0;
   color: #6b9b41;

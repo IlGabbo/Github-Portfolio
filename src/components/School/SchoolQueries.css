@@ -17,6 +17,31 @@
     }
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+    .tpsi,
+    .computing-science {
+        flex-shrink: 0;
+        width: 120px;
+        height: 140px;
+    }    
+
+    .tpsi h1,
+    .computing-science h1 {
+        font-size: 30px;
+    }
+
+    .tpsi .ex-2,
+    .computing-science .ex-2 {
+        bottom: 0;
+    }
+
+    .name {
+        width: 90%;
+        
+        font-size: 12px;
+    }
+}
+
 @media screen and (max-width: 480px) {    
     .tpsi,
     .computing-science {
